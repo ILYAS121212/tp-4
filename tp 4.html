@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technologie web : TP N° 4 Les conteneurs</title>
+    <style>
+        /* CSS الجزء الخاص بـ التنسيق */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: grid;
+            /* تقسيم لـ 3 أعمدة متساوية حسب التمرين */
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ستايل الصناديق */
+        .box {
+            background-color: aliceblue;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* تنسيق الصور (روابط مباشرة) */
+        .box img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        /* تأثير الزوم عند السورفول */
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            background-color: #eaf4ff;
+        }
+
+        h2 { color: #333; font-size: 1.3rem; margin: 10px 0; }
+        p { color: #666; font-size: 0.9rem; margin-bottom: 15px; }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        button:hover { background-color: #2980b9; }
+
+        /* توزيع الـ Grid كما هو مطلوب في ورقة الـ TP */
+
+        .box1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .box2 {
+            grid-column: 2 / 4; /* ياخد مساحة جوج أعمدة الفوق */
+            grid-row: 1 / 2;
+        }
+
+        .box3 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .box4 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        .box5 {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+
+        .box6 {
+            grid-column: 1 / 4; /* ياخد العرض كامل لتحت */
+            grid-row: 3 / 4;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box box1">
+            <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="IA">
+            <h2>Intelligence Artificielle</h2>
+            <p>Introduction au Machine Learning.</p>
+            <button>Voir plus</button>
+        </div>
+
+        <div class="box box2">
+            <img src="https://cdn-icons-png.flaticon.com/512/2210/2210153.png" alt="Web">
+            <h2>Développement Web</h2>
+            <p>Création d'applications web modernes.</p>
+            <button>Voir plus</button>
+        </div>
+
+        <div class="box box3">
+            <img src="https://cdn-icons-png.flaticon.com/512/4248/4248254.png" alt="Data">
+            <h2>Data Science</h2>
+            <p>Analyse et traitement des données.</p>
+            <button>Voir plus</button>
+        </div>
+
+        <div class="box box4">
+            <img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png" alt="Cyber">
+            <h2>Cybersécurité</h2>
+            <p>Protection des systèmes informatiques.</p>
+            <button>Voir plus</button>
+        </div>
+
+        <div class="box box5">
+            <img src="https://cdn-icons-png.flaticon.com/512/2413/2413139.png" alt="Cloud">
+            <h2>Cloud Computing</h2>
+            <p>Services d'hébergement distants.</p>
+            <button>Voir plus</button>
+        </div>
+
+        <div class="box box6">
+            <img src="https://cdn-icons-png.flaticon.com/512/2544/2544111.png" alt="IoT">
+            <h2>Internet des Objets (IoT)</h2>
+            <p>Connecter les appareils intelligents.</p>
+            <button>Voir plus</button>
+        </div>
+    </div>
+
+</body>
+</html>
